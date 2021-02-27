@@ -13,7 +13,7 @@ Si el api de itunes o de tvmaze dieran problemas de cors tambien, lo que haría 
 El proyecto ya se encuentra compilado, con lo cual no habría necesidad de hacer nada mas.  
 Si se quisiera modificar el proyecto, se necesitaría instalar node.js y hacer  ``` npm i ``` sobre la carpeta del proyecto para instalar las dependencias necesarias.  
 ## Estructura:  
-El codigo fuente del proyecto se encuentra dentro de la carpeta ```` src ``` la cual utiliza los siguientes directorios y archivos relevantes:  
+El codigo fuente del proyecto se encuentra dentro de la carpeta ``` src ``` la cual utiliza los siguientes directorios y archivos relevantes:  
 ```
 /components (En la cual se encuentran los componentes utilizados para el proyecto)
 ./less (En el cual se encuentran los archivos LESS para los estilos sin compilar)
