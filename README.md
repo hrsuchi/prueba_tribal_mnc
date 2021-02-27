@@ -1,6 +1,6 @@
 # Prueba MNC
 [CLICK AQUI PARA VER LA PRUEBA EN FUNCIONAMIENTO](https://lsyk4.github.io/prueba_tribal_mnc/build/)  
-En cualquier caso, se puede utilizar el proyecto utilizando los archivos de la carpeta "build" en el repositorio (Si diera problemas con CORS o algo del estilo, en local debería de funcionar bien).  
+En cualquier caso, se puede utilizar el proyecto utilizando los archivos de la carpeta "build" en el repositorio (Si diera problemas con CORS o algo del estilo, en local debería de funcionar bien. Sin embargo, si se diera el caso de que fueran CORS, se resolvería metiendo las apis de itunes y tv maze en el archivo php con las cors resueltas).  
 
 ## Sobre el proyecto:
 El proyecto está basado en React. La direccion de arriba serviría para ver el proyecto en funcionamiento y si se desea ver el codigo fuente, se puede [hacer clic aqui](https://github.com/lsyk4/prueba_tribal_mnc)  
