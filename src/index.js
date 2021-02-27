@@ -7,6 +7,7 @@ import $ from 'jquery/jquery.min.js';
 import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import axios from "axios";
+import "@fortawesome/fontawesome-free/css/all.css"
 ReactDOM.render(
   <React.StrictMode>
     <App />

@@ -1,0 +1,33 @@
+.card{
+    width: 100%;
+    img{
+        width:100%;
+    }
+    a{
+        position: absolute;
+        width: 100%;
+        top:0px;
+        left: 0px;
+        color:#fff;
+        background: rgba(0,0,0,0.5);
+        text-decoration: none;
+        padding:10px 0 10px 0;
+        h5{
+            transition: font-size 0.5s;        
+            &:hover{
+                font-size: 25px;
+            }
+        }
+    }
+    video{
+        position: absolute; 
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        opacity: 0;
+        transition: opacity 0.5s;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}

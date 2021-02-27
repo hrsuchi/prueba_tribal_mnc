@@ -1,0 +1,2 @@
+.card,.card a,.card img{width:100%}.card a{position:absolute;top:0;left:0;color:#fff;background:rgba(0,0,0,.5);text-decoration:none;padding:10px 0}.card a h5{transition:font-size .5s}.card a h5:hover{font-size:25px}.card video{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);opacity:0;transition:opacity .5s}.card video:hover{opacity:1}#searchTerms{color:#fff;border:1px solid #000;border-top-left-radius:100px;border-bottom-left-radius:100px}body{background:rgba(0,0,0,.8)!important}body *{color:#fff}
+/*# sourceMappingURL=main.f5e7e770.chunk.css.map */

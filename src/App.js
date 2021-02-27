@@ -1,29 +1,10 @@
-import Routes from "./Routes.js"
-import MainNavbar from "./components/MainNavbar"
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import Home from "./views/Home"
+import "./style/style.css"
 function App() {
   return (
     <div className="container-fluid">
       <div className="row">
-        <Router>
-          <MainNavbar/>
-          <Switch>
-            {
-              Routes.map((value, index)=>
-                value.component !== "" ? (
-                  <Route exact path={value.path} component={value.component} />
-                ):(
-                  <></>
-                )
-              )
-            }            
-          </Switch>
-        </Router>
+        <Home/>
       </div>
     </div>
   );
