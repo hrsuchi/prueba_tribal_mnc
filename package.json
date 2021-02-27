@@ -1,5 +1,6 @@
 {
-  "name": "lsyk4.com",
+  "name": "mnctrubantest",
+  "homepage": "./",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

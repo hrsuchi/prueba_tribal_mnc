@@ -47,7 +47,7 @@
         $crcind = json_encode(json_decode($crcind, true)["SOAP-ENV_Body"]["QueryByNameResponse"]["QueryByNameResult"]["diffgr_diffgram"]["QueryByName_DataSet"], JSON_PRETTY_PRINT);
         print_r($crcind);
     }else{
-        echo "{nodata}";
+        echo "";
     }
     
 ?>

@@ -40,7 +40,7 @@ function Home() {
         setCrcind(json.QueryByName);
     }
 
-    const handleSubmit = (e) =>{
+    const handleSubmit = (e) => {
         e.preventDefault();
         setSearchTerms(document.querySelector("#searchTerms").value.trim().replace(" ", "+").toLowerCase());
         fetchItunesSongs();
@@ -66,65 +66,102 @@ function Home() {
                         </div>
                     </form>
                 </div>
-                <div className="col-12 mt-5 mb-5">
-                    <div className="row">
-                        <h1>Canciones (iTunes)</h1>
-                        {
-                            itunesSongs.length > 0 ? itunesSongs.map(song => (
-                                <ItunesCard image={song.artworkUrl100} title={song.trackName} link={song.trackViewUrl} media={song.previewUrl} />
-                            )) : <>Sin resultados ...</>
-                        }
-                    </div>
-                </div>
 
-                <div className="col-12 mt-5 mb-5">
-                    <div className="row">
-                        <h1>Películas (iTunes)</h1>
-                        {
-                            itunesMovies.length > 0 ? itunesMovies.map(movie => (
-                                <ItunesCard image={movie.artworkUrl100} title={movie.trackName} link={movie.trackViewUrl} media={movie.previewUrl} />
-                            )) : <>Sin resultados ...</>
-                        }
-                    </div>
-                </div>
+                {
+                    itunesSongs.length > 0 ? <>
+                        <div className="col-12 mt-5 mb-5">
+                            <div className="row">
+                                <h1>Canciones (iTunes)</h1>
+                                {
+                                    itunesSongs.map(song => (
+                                        <ItunesCard image={song.artworkUrl100} title={song.trackName} link={song.trackViewUrl} media={song.previewUrl} />
+                                    ))
+                                }
+                            </div>
+                        </div>
+                    </> : <></>
+                }
 
-                <div className="col-12 mt-5 mb-5">
-                    <div className="row">
-                        <h1>Ebooks (iTunes)</h1>
-                        {
-                            itunesEbooks.length > 0 ? itunesEbooks.map(book => (
-                                <ItunesCard image={book.artworkUrl100} title={book.trackName} link={book.trackViewUrl} media={book.previewUrl} />
-                            )) : <>Sin resultados ...</>
-                        }
-                    </div>
-                </div>
 
-                <div className="col-12 mt-5 mb-5">
-                    <div className="row">
-                        <h1>Shows TV (TV Maze)</h1>
-                        {
-                            tvmaze.length > 0 ? tvmaze.map(tvshow => (
-                                <TvMazeCard image={tvshow.show.image !== null ? tvshow.show.image.original : ""} title={tvshow.show.name} link={tvshow.show.url} />
-                            )) : <>Sin resultados ...</>
-                        }
-                    </div>
-                </div>
 
-                <div className="col-12 mt-5 mb-5">
-                    <div className="row">
-                        <h1>Personas</h1>
-                        {
-                            crcind != null && crcind.length > 0  ? crcind.map(person => (
-                                <CrcindCard id={person.ID} nombre={person.Name} dob={person.DOB} ssn={person.SSN} />
-                            )) : <>{
-                                typeof crcind == "undefined" ? <>Sin resultados ...</>: <CrcindCard id={crcind.ID} nombre={crcind.Name} dob={crcind.DOB} ssn={crcind.SSN} />
-                            }</>
-                        }
-                    </div>
-                </div>
+                {
+                    itunesMovies.length > 0 ? <>
+                        <div className="col-12 mt-5 mb-5">
+                            <div className="row">
+                                <h1>Películas (iTunes)</h1>
+                                {
+                                    itunesMovies.map(movie => (
+                                        <ItunesCard image={movie.artworkUrl100} title={movie.trackName} link={movie.trackViewUrl} media={movie.previewUrl} />
+                                    ))
+                                }
+                            </div>
+                        </div>
+                    </> : <></>
+                }
+
+
+
+                {
+                    itunesEbooks.length > 0 ? <>
+                        <div className="col-12 mt-5 mb-5">
+                            <div className="row">
+                                <h1>Ebooks (iTunes)</h1>
+                                {
+                                    itunesEbooks.map(book => (
+                                        <ItunesCard image={book.artworkUrl100} title={book.trackName} link={book.trackViewUrl} media={book.previewUrl} />
+                                    ))
+                                }
+                            </div>
+                        </div>
+                    </> : <></>
+                }
+
+
+
+                {
+                    tvmaze.length > 0 ? <>
+                        <div className="col-12 mt-5 mb-5">
+                            <div className="row">
+                                <h1>Shows TV (TV Maze)</h1>
+                                {
+                                    tvmaze.map(tvshow => (
+                                        <TvMazeCard image={tvshow.show.image !== null ? tvshow.show.image.original : ""} title={tvshow.show.name} link={tvshow.show.url} />
+                                    ))
+                                }
+                            </div>
+                        </div>
+                    </> : <></>
+                }
+
+
+
+                {
+                    crcind != null && crcind.length > 0 ? <>
+                        <div className="col-12 mt-5 mb-5">
+                            <div className="row">
+                                <h1>Personas</h1>
+                                {
+                                    crcind.map(person => (
+                                        <CrcindCard id={person.ID} nombre={person.Name} dob={person.DOB} ssn={person.SSN} />
+                                    ))
+                                }
+                            </div>
+                        </div>
+                    </> : <>{
+                        typeof crcind == "undefined" || crcind == "" ? <></> : <>
+                            <div className="col-12 mt-5 mb-5">
+                                <div className="row">
+                                    <h1>Personas</h1>
+                                    <CrcindCard id={crcind.ID} nombre={crcind.Name} dob={crcind.DOB} ssn={crcind.SSN} />
+                                </div>
+                            </div>
+                        </>
+                    }</>
+                }
+
 
             </div>
-        </div>
+        </div >
     );
 }
 export default Home
