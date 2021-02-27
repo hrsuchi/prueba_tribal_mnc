@@ -1,6 +1,5 @@
 # Prueba MNC
-[CLICK AQUI PARA VER LA PRUEBA EN FUNCIONAMIENTO](https://lsyk4.github.io/prueba_tribal_mnc/build/)  
-En cualquier caso, se puede utilizar el proyecto utilizando los archivos de la carpeta "build" en el repositorio (Si diera problemas con CORS o algo del estilo, en local debería de funcionar bien. Sin embargo, si se diera el caso de que fueran CORS, se resolvería metiendo las apis de itunes y tv maze en el archivo php con las cors resueltas).  
+Se puede utilizar el proyecto montando los archivos de la carpeta "build" del el repositorio en cualquier carpeta local  
 
 ## Sobre el proyecto:
 El proyecto está basado en React. La direccion de arriba serviría para ver el proyecto en funcionamiento y si se desea ver el codigo fuente, se puede [hacer clic aqui](https://github.com/lsyk4/prueba_tribal_mnc)  
@@ -9,9 +8,20 @@ Este archivo manejador del api se subio a un servidor y puede ser accedido por m
 Un ejemplo de busqueda sería
 ```
 https://lsyk4.com/testmncapi/api.php?q=john
-```
+```  
+Si el api de itunes o de tvmaze dieran problemas de cors tambien, lo que haría es meter estas apis en el manejador PHP de arriba que tiene el asunto de las cors resueltas y así evitar inconvenientes al momento de subirlo a un servidor  
 El proyecto ya se encuentra compilado, con lo cual no habría necesidad de hacer nada mas.  
-Si se quisiera modificar el proyecto, se necesitaría instalar node.js y hacer  ``` npm i ``` sobre la carpeta del proyecto para instalar las dependencias necesarias.
+Si se quisiera modificar el proyecto, se necesitaría instalar node.js y hacer  ``` npm i ``` sobre la carpeta del proyecto para instalar las dependencias necesarias.  
+## Estructura:  
+El codigo fuente del proyecto se encuentra dentro de la carpeta ```` src ``` la cual utiliza los siguientes directorios y archivos relevantes:  
+```
+/components (En la cual se encuentran los componentes utilizados para el proyecto)
+./less (En el cual se encuentran los archivos LESS para los estilos sin compilar)
+./style (Donde se encuentran los css compilados a partir de los archivos LESS)
+./views (Aquí se encuentran las vistas utilizadas)
+app.js (Maneja algunos imports)
+index.js (Maneja la raiz del sitio y algunos imports)
+```
 ## Requerimientos para hacer funcionar el proyecto:
 Realmente el proyecto correría con tan solo tener un navegador web.
 Si se quisiera configurar un servidor desde cero, correr los siguientes comandos en linux
